@@ -1,0 +1,20 @@
+PODS:
+  - Alamofire (4.3.0)
+  - Material (2.4.18):
+    - Material/Core (= 2.4.18)
+  - Material/Core (2.4.18)
+  - TKAutoCompleteTextField (0.3.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - Material
+  - TKAutoCompleteTextField
+
+SPEC CHECKSUMS:
+  Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
+  Material: 1523b6c85b1d18805da2cb28040000b40bcefc7e
+  TKAutoCompleteTextField: 604afb75f8eddc96325fa43ddd26d5fb952ec106
+
+PODFILE CHECKSUM: 8ae7656aacb684c4ff210ffbc78393b74de15e87
+
+COCOAPODS: 1.2.0

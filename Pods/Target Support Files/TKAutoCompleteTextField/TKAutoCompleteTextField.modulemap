@@ -1,0 +1,6 @@
+framework module TKAutoCompleteTextField {
+  umbrella header "TKAutoCompleteTextField-umbrella.h"
+
+  export *
+  module * { export * }
+}

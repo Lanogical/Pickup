@@ -1,0 +1,576 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0C48182840DC419D0EA33B36 /* Pods_Pickup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FEA63CE1474FAFD6D876459 /* Pods_Pickup.framework */; };
+		8608584A1E78571400D08970 /* AppSnackbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860858491E78571400D08970 /* AppSnackbarController.swift */; };
+		8608584C1E78A01F00D08970 /* LocalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8608584B1E78A01F00D08970 /* LocalData.swift */; };
+		8676010C1E76066A0005CA51 /* APIRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8676010B1E76066A0005CA51 /* APIRequests.swift */; };
+		867601161E782DC90005CA51 /* CustomGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867601151E782DC90005CA51 /* CustomGroupViewController.swift */; };
+		867DBEFE1E6CB09700A2D0FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867DBEFD1E6CB09700A2D0FB /* AppDelegate.swift */; };
+		867DBF001E6CB09700A2D0FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867DBEFF1E6CB09700A2D0FB /* ViewController.swift */; };
+		867DBF031E6CB09700A2D0FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 867DBF011E6CB09700A2D0FB /* Main.storyboard */; };
+		867DBF051E6CB09700A2D0FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 867DBF041E6CB09700A2D0FB /* Assets.xcassets */; };
+		867DBF081E6CB09700A2D0FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 867DBF061E6CB09700A2D0FB /* LaunchScreen.storyboard */; };
+		867DBF101E6CB2F000A2D0FB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867DBF0F1E6CB2F000A2D0FB /* LoginViewController.swift */; };
+		867DBF171E6CC64900A2D0FB /* ParentHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867DBF161E6CC64900A2D0FB /* ParentHomeViewController.swift */; };
+		867DBF191E6CED4400A2D0FB /* HereViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867DBF181E6CED4400A2D0FB /* HereViewController.swift */; };
+		868853DC1E7DA54000187790 /* PickupUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868853DB1E7DA54000187790 /* PickupUITests.swift */; };
+		86AF56551E7A0EF0009C5909 /* Teachers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86AF56541E7A0EF0009C5909 /* Teachers.storyboard */; };
+		86AF565A1E7A1766009C5909 /* TeacherTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AF56591E7A1766009C5909 /* TeacherTableView.swift */; };
+		86AF565C1E7A1836009C5909 /* Kid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AF565B1E7A1836009C5909 /* Kid.swift */; };
+		86E2F05E1E7EDA7A0017F2C2 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E2F05D1E7EDA7A0017F2C2 /* Theme.swift */; };
+		86E2F0621E7EDFA20017F2C2 /* displayGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E2F0611E7EDFA20017F2C2 /* displayGroupsViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		868853DE1E7DA54000187790 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 867DBEF21E6CB09700A2D0FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 867DBEF91E6CB09700A2D0FB;
+			remoteInfo = Pickup;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3FEA63CE1474FAFD6D876459 /* Pods_Pickup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pickup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		860858491E78571400D08970 /* AppSnackbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSnackbarController.swift; sourceTree = "<group>"; };
+		8608584B1E78A01F00D08970 /* LocalData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalData.swift; sourceTree = "<group>"; };
+		8676010B1E76066A0005CA51 /* APIRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequests.swift; sourceTree = "<group>"; };
+		867601151E782DC90005CA51 /* CustomGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomGroupViewController.swift; sourceTree = "<group>"; };
+		867DBEFA1E6CB09700A2D0FB /* Pickup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pickup.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		867DBEFD1E6CB09700A2D0FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		867DBEFF1E6CB09700A2D0FB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		867DBF021E6CB09700A2D0FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		867DBF041E6CB09700A2D0FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		867DBF071E6CB09700A2D0FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		867DBF091E6CB09700A2D0FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		867DBF0F1E6CB2F000A2D0FB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		867DBF161E6CC64900A2D0FB /* ParentHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentHomeViewController.swift; sourceTree = "<group>"; };
+		867DBF181E6CED4400A2D0FB /* HereViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HereViewController.swift; sourceTree = "<group>"; };
+		868853D91E7DA54000187790 /* PickupUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PickupUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		868853DB1E7DA54000187790 /* PickupUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickupUITests.swift; sourceTree = "<group>"; };
+		868853DD1E7DA54000187790 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86AF56541E7A0EF0009C5909 /* Teachers.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Teachers.storyboard; sourceTree = "<group>"; };
+		86AF56591E7A1766009C5909 /* TeacherTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherTableView.swift; sourceTree = "<group>"; };
+		86AF565B1E7A1836009C5909 /* Kid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kid.swift; sourceTree = "<group>"; };
+		86E2F05D1E7EDA7A0017F2C2 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		86E2F0611E7EDFA20017F2C2 /* displayGroupsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = displayGroupsViewController.swift; sourceTree = "<group>"; };
+		A9A8D7C90DF4376C25B961AE /* Pods-Pickup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pickup.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pickup/Pods-Pickup.debug.xcconfig"; sourceTree = "<group>"; };
+		E6BB8552065F412E56A037E3 /* Pods-Pickup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pickup.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pickup/Pods-Pickup.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		867DBEF71E6CB09700A2D0FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C48182840DC419D0EA33B36 /* Pods_Pickup.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		868853D61E7DA54000187790 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3F6770501FD4DA348E2BA70A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A9A8D7C90DF4376C25B961AE /* Pods-Pickup.debug.xcconfig */,
+				E6BB8552065F412E56A037E3 /* Pods-Pickup.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8676010A1E7605F80005CA51 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				8676010B1E76066A0005CA51 /* APIRequests.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		867DBEF11E6CB09700A2D0FB = {
+			isa = PBXGroup;
+			children = (
+				867DBEFC1E6CB09700A2D0FB /* Pickup */,
+				868853DA1E7DA54000187790 /* PickupUITests */,
+				867DBEFB1E6CB09700A2D0FB /* Products */,
+				3F6770501FD4DA348E2BA70A /* Pods */,
+				A286803CE762479532FF250C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		867DBEFB1E6CB09700A2D0FB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				867DBEFA1E6CB09700A2D0FB /* Pickup.app */,
+				868853D91E7DA54000187790 /* PickupUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		867DBEFC1E6CB09700A2D0FB /* Pickup */ = {
+			isa = PBXGroup;
+			children = (
+				86AF56561E7A1711009C5909 /* Teachers */,
+				8676010A1E7605F80005CA51 /* API */,
+				867DBEFD1E6CB09700A2D0FB /* AppDelegate.swift */,
+				867DBEFF1E6CB09700A2D0FB /* ViewController.swift */,
+				867DBF011E6CB09700A2D0FB /* Main.storyboard */,
+				867DBF041E6CB09700A2D0FB /* Assets.xcassets */,
+				867DBF061E6CB09700A2D0FB /* LaunchScreen.storyboard */,
+				867DBF091E6CB09700A2D0FB /* Info.plist */,
+				867DBF131E6CB30E00A2D0FB /* Login */,
+				867DBF161E6CC64900A2D0FB /* ParentHomeViewController.swift */,
+				867DBF181E6CED4400A2D0FB /* HereViewController.swift */,
+				867601151E782DC90005CA51 /* CustomGroupViewController.swift */,
+				860858491E78571400D08970 /* AppSnackbarController.swift */,
+				8608584B1E78A01F00D08970 /* LocalData.swift */,
+				86AF56541E7A0EF0009C5909 /* Teachers.storyboard */,
+				86E2F05D1E7EDA7A0017F2C2 /* Theme.swift */,
+				86E2F0611E7EDFA20017F2C2 /* displayGroupsViewController.swift */,
+			);
+			path = Pickup;
+			sourceTree = "<group>";
+		};
+		867DBF131E6CB30E00A2D0FB /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				867DBF0F1E6CB2F000A2D0FB /* LoginViewController.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		868853DA1E7DA54000187790 /* PickupUITests */ = {
+			isa = PBXGroup;
+			children = (
+				868853DB1E7DA54000187790 /* PickupUITests.swift */,
+				868853DD1E7DA54000187790 /* Info.plist */,
+			);
+			path = PickupUITests;
+			sourceTree = "<group>";
+		};
+		86AF56561E7A1711009C5909 /* Teachers */ = {
+			isa = PBXGroup;
+			children = (
+				86AF56591E7A1766009C5909 /* TeacherTableView.swift */,
+				86AF565B1E7A1836009C5909 /* Kid.swift */,
+			);
+			name = Teachers;
+			sourceTree = "<group>";
+		};
+		A286803CE762479532FF250C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3FEA63CE1474FAFD6D876459 /* Pods_Pickup.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		867DBEF91E6CB09700A2D0FB /* Pickup */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 867DBF0C1E6CB09700A2D0FB /* Build configuration list for PBXNativeTarget "Pickup" */;
+			buildPhases = (
+				9C20274F41A76C9D4AD085DF /* [CP] Check Pods Manifest.lock */,
+				867DBEF61E6CB09700A2D0FB /* Sources */,
+				867DBEF71E6CB09700A2D0FB /* Frameworks */,
+				867DBEF81E6CB09700A2D0FB /* Resources */,
+				C91154AC1007A9B21A441233 /* [CP] Embed Pods Frameworks */,
+				4834D35EE166C5301F1F3CEE /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Pickup;
+			productName = Pickup;
+			productReference = 867DBEFA1E6CB09700A2D0FB /* Pickup.app */;
+			productType = "com.apple.product-type.application";
+		};
+		868853D81E7DA54000187790 /* PickupUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 868853E01E7DA54000187790 /* Build configuration list for PBXNativeTarget "PickupUITests" */;
+			buildPhases = (
+				868853D51E7DA54000187790 /* Sources */,
+				868853D61E7DA54000187790 /* Frameworks */,
+				868853D71E7DA54000187790 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				868853DF1E7DA54000187790 /* PBXTargetDependency */,
+			);
+			name = PickupUITests;
+			productName = PickupUITests;
+			productReference = 868853D91E7DA54000187790 /* PickupUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		867DBEF21E6CB09700A2D0FB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Koska;
+				TargetAttributes = {
+					867DBEF91E6CB09700A2D0FB = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 36HA7C4RHE;
+						ProvisioningStyle = Automatic;
+					};
+					868853D81E7DA54000187790 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 36HA7C4RHE;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 867DBEF91E6CB09700A2D0FB;
+					};
+				};
+			};
+			buildConfigurationList = 867DBEF51E6CB09700A2D0FB /* Build configuration list for PBXProject "Pickup" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 867DBEF11E6CB09700A2D0FB;
+			productRefGroup = 867DBEFB1E6CB09700A2D0FB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				867DBEF91E6CB09700A2D0FB /* Pickup */,
+				868853D81E7DA54000187790 /* PickupUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		867DBEF81E6CB09700A2D0FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				867DBF081E6CB09700A2D0FB /* LaunchScreen.storyboard in Resources */,
+				86AF56551E7A0EF0009C5909 /* Teachers.storyboard in Resources */,
+				867DBF051E6CB09700A2D0FB /* Assets.xcassets in Resources */,
+				867DBF031E6CB09700A2D0FB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		868853D71E7DA54000187790 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4834D35EE166C5301F1F3CEE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pickup/Pods-Pickup-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C20274F41A76C9D4AD085DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C91154AC1007A9B21A441233 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pickup/Pods-Pickup-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		867DBEF61E6CB09700A2D0FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8608584C1E78A01F00D08970 /* LocalData.swift in Sources */,
+				86AF565C1E7A1836009C5909 /* Kid.swift in Sources */,
+				8608584A1E78571400D08970 /* AppSnackbarController.swift in Sources */,
+				867DBF101E6CB2F000A2D0FB /* LoginViewController.swift in Sources */,
+				8676010C1E76066A0005CA51 /* APIRequests.swift in Sources */,
+				86AF565A1E7A1766009C5909 /* TeacherTableView.swift in Sources */,
+				867DBF001E6CB09700A2D0FB /* ViewController.swift in Sources */,
+				867DBEFE1E6CB09700A2D0FB /* AppDelegate.swift in Sources */,
+				86E2F0621E7EDFA20017F2C2 /* displayGroupsViewController.swift in Sources */,
+				867DBF171E6CC64900A2D0FB /* ParentHomeViewController.swift in Sources */,
+				86E2F05E1E7EDA7A0017F2C2 /* Theme.swift in Sources */,
+				867DBF191E6CED4400A2D0FB /* HereViewController.swift in Sources */,
+				867601161E782DC90005CA51 /* CustomGroupViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		868853D51E7DA54000187790 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				868853DC1E7DA54000187790 /* PickupUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		868853DF1E7DA54000187790 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 867DBEF91E6CB09700A2D0FB /* Pickup */;
+			targetProxy = 868853DE1E7DA54000187790 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		867DBF011E6CB09700A2D0FB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				867DBF021E6CB09700A2D0FB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		867DBF061E6CB09700A2D0FB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				867DBF071E6CB09700A2D0FB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		867DBF0A1E6CB09700A2D0FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		867DBF0B1E6CB09700A2D0FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		867DBF0D1E6CB09700A2D0FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9A8D7C90DF4376C25B961AE /* Pods-Pickup.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 36HA7C4RHE;
+				INFOPLIST_FILE = Pickup/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = at.koska.Pickup;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		867DBF0E1E6CB09700A2D0FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6BB8552065F412E56A037E3 /* Pods-Pickup.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 36HA7C4RHE;
+				INFOPLIST_FILE = Pickup/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = at.koska.Pickup;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		868853E11E7DA54000187790 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 36HA7C4RHE;
+				INFOPLIST_FILE = PickupUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lanogical.PickupUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Pickup;
+			};
+			name = Debug;
+		};
+		868853E21E7DA54000187790 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 36HA7C4RHE;
+				INFOPLIST_FILE = PickupUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lanogical.PickupUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Pickup;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		867DBEF51E6CB09700A2D0FB /* Build configuration list for PBXProject "Pickup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				867DBF0A1E6CB09700A2D0FB /* Debug */,
+				867DBF0B1E6CB09700A2D0FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		867DBF0C1E6CB09700A2D0FB /* Build configuration list for PBXNativeTarget "Pickup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				867DBF0D1E6CB09700A2D0FB /* Debug */,
+				867DBF0E1E6CB09700A2D0FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		868853E01E7DA54000187790 /* Build configuration list for PBXNativeTarget "PickupUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				868853E11E7DA54000187790 /* Debug */,
+				868853E21E7DA54000187790 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 867DBEF21E6CB09700A2D0FB /* Project object */;
+}
