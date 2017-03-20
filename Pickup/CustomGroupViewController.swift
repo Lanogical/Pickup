@@ -249,11 +249,13 @@ class CustomGroupViewController: UIViewController, UITextFieldDelegate {
     
     func setupText1(){
         firstTextField.suggestions = kids
+        firstTextField.placeholder = "Kid 1"
         firstTextField.suggestionView.width = firstTextField.width - ((firstTextField.width / 100) * 15)
     }
     
     func setupText2(){
         secondTextField.suggestions = kids
+        secondTextField.placeholder = "Kid 2"
         secondTextField.alpha = 0
         secondTextField.isEnabled = false
         secondTextField.suggestionView.width = secondTextField.width - ((secondTextField.width / 100) * 15)
@@ -261,6 +263,7 @@ class CustomGroupViewController: UIViewController, UITextFieldDelegate {
     
     func setupText3(){
         thirdTextField.suggestions = kids
+        thirdTextField.placeholder = "Kid 3"
         thirdTextField.alpha = 0
         thirdTextField.isEnabled = false
         thirdTextField.suggestionView.width = thirdTextField.width - ((thirdTextField.width / 100) * 15)
@@ -268,6 +271,7 @@ class CustomGroupViewController: UIViewController, UITextFieldDelegate {
     
     func setupText4(){
         fourthTextField.suggestions = kids
+        fourthTextField.placeholder = "Kid 4"
         fourthTextField.alpha = 0
         fourthTextField.isEnabled = false
         fourthTextField.suggestionView.width = fourthTextField.width - ((fourthTextField.width / 100) * 15)
@@ -275,6 +279,7 @@ class CustomGroupViewController: UIViewController, UITextFieldDelegate {
     
     func setupText5(){
         fifthTextField.suggestions = kids
+        fifthTextField.placeholder = "Kid 5"
         fifthTextField.alpha = 0
         fifthTextField.isEnabled = false
         fifthTextField.suggestionView.width = fifthTextField.width - ((fifthTextField.width / 100) * 15)
@@ -282,6 +287,7 @@ class CustomGroupViewController: UIViewController, UITextFieldDelegate {
 
     func setupText6(){
         sixthTextField.suggestions = kids
+        sixthTextField.placeholder = "Kid 6"
         sixthTextField.alpha = 0
         sixthTextField.isEnabled = false
         sixthTextField.suggestionView.width = sixthTextField.width - ((sixthTextField.width / 100) * 15)
@@ -289,6 +295,7 @@ class CustomGroupViewController: UIViewController, UITextFieldDelegate {
 
     func setupText7(){
         seventhTextField.suggestions = kids
+        seventhTextField.placeholder = "Kid 7"
         seventhTextField.alpha = 0
         seventhTextField.isEnabled = false
         seventhTextField.suggestionView.width = seventhTextField.width - ((seventhTextField.width / 100) * 15)
