@@ -9,4 +9,5 @@ target 'Pickup' do
   pod 'Material'
   pod 'Alamofire'
   pod 'TKAutoCompleteTextField'
+  pod 'BuddyBuildSDK'
 end

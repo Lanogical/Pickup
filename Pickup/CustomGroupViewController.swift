@@ -18,8 +18,10 @@ class CustomGroupViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var fourthTextField: TKAutoCompleteTextField!
     @IBOutlet var fifthTextField: TKAutoCompleteTextField!
     @IBOutlet var sixthTextField: TKAutoCompleteTextField!
-    @IBOutlet var seventhTextField: TKAutoCompleteTextField!
     
+    @IBOutlet var otherView: UIView!
+    
+    @IBOutlet var scroll: UIScrollView!
     static let shared = CustomGroupViewController()
     
     var kids = ["Ben Koska", "Tom Koska", "Luk Koska"]
@@ -29,6 +31,25 @@ class CustomGroupViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var groupName: TextField!
    
     @IBOutlet var fab: FabButton!
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField == groupName {
+            
+        }else{
+            groupName.isEnabled = false
+            groupName.isHidden = true
+            groupName.alpha = 0
+            
+            scroll.position.y = 200.0
+            
+            print(scroll.position)
+            
+            print(scroll.alpha)
+            print(scroll.isHidden)
+            
+            scroll.width = view.width
+        }
+    }
     
     override func viewDidAppear(_ animated: Bool) {
         if APIRequests.isConnectedToNetwork() {
@@ -83,8 +104,6 @@ class CustomGroupViewController: UIViewController, UITextFieldDelegate {
             self.fifthTextField.suggestionView.reloadData()
             self.sixthTextField.suggestions = self.kids
             self.sixthTextField.suggestionView.reloadData()
-            self.seventhTextField.suggestions = self.kids
-            self.seventhTextField.suggestionView.reloadData()
         }
         
         self.firstTextField.delegate = self
@@ -93,7 +112,6 @@ class CustomGroupViewController: UIViewController, UITextFieldDelegate {
         self.fourthTextField.delegate = self
         self.fifthTextField.delegate = self
         self.sixthTextField.delegate = self
-        self.seventhTextField.delegate = self
         self.groupName.delegate = self
        
     }
@@ -116,7 +134,6 @@ class CustomGroupViewController: UIViewController, UITextFieldDelegate {
         setupText4()
         setupText5()
         setupText6()
-        setupText7()
         view.backgroundColor = Color.grey.lighten2
         fab.title = ""
         fab.image = Icon.add
@@ -132,7 +149,6 @@ class CustomGroupViewController: UIViewController, UITextFieldDelegate {
         if (fourthTextField.text?.isEmpty)! != true {newGroup.append(fourthTextField.text!)}
         if (fifthTextField.text?.isEmpty)! != true {newGroup.append(fifthTextField.text!)}
         if (sixthTextField.text?.isEmpty)! != true {newGroup.append(sixthTextField.text!)}
-        if (seventhTextField.text?.isEmpty)! != true {newGroup.append(seventhTextField.text!)}
         newGroup.remove(at: 0)
         let groupString = newGroup.joined(separator: ", ")
         APIRequests.createGroup(kids: groupString, name: groupName.text!)
@@ -168,10 +184,6 @@ class CustomGroupViewController: UIViewController, UITextFieldDelegate {
         if (sixthTextField.text?.isEmpty)! != true {
             APIRequests.logKid(sixthTextField.text!, callback: {})
             newGroup.append(sixthTextField.text!)
-        }
-        if (seventhTextField.text?.isEmpty)! != true {
-            APIRequests.logKid(seventhTextField.text!, callback: {})
-            newGroup.append(seventhTextField.text!)
         }
         
         let groupString = newGroup.joined(separator: ", ")
@@ -236,12 +248,6 @@ class CustomGroupViewController: UIViewController, UITextFieldDelegate {
             sixthTextField.isEnabled = true
         break
             
-        case 7:
-            seventhTextField.alpha = 1
-            seventhTextField.isEnabled = true
-            fab.isEnabled = false
-        break
-            
         default:
             break
         }
@@ -291,14 +297,6 @@ class CustomGroupViewController: UIViewController, UITextFieldDelegate {
         sixthTextField.alpha = 0
         sixthTextField.isEnabled = false
         sixthTextField.suggestionView.width = sixthTextField.width - ((sixthTextField.width / 100) * 15)
-    }
-
-    func setupText7(){
-        seventhTextField.suggestions = kids
-        seventhTextField.placeholder = "Kid 7"
-        seventhTextField.alpha = 0
-        seventhTextField.isEnabled = false
-        seventhTextField.suggestionView.width = seventhTextField.width - ((seventhTextField.width / 100) * 15)
     }
 
 }

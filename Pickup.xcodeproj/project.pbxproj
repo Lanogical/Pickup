@@ -62,6 +62,7 @@
 		86AF565B1E7A1836009C5909 /* Kid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kid.swift; sourceTree = "<group>"; };
 		86E2F05D1E7EDA7A0017F2C2 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		86E2F0611E7EDFA20017F2C2 /* displayGroupsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = displayGroupsViewController.swift; sourceTree = "<group>"; };
+		86EB9FF91E806CE50065C655 /* Pickup-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pickup-Bridging-Header.h"; sourceTree = "<group>"; };
 		A9A8D7C90DF4376C25B961AE /* Pods-Pickup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pickup.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pickup/Pods-Pickup.debug.xcconfig"; sourceTree = "<group>"; };
 		E6BB8552065F412E56A037E3 /* Pods-Pickup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pickup.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pickup/Pods-Pickup.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -142,6 +143,7 @@
 				86AF56541E7A0EF0009C5909 /* Teachers.storyboard */,
 				86E2F05D1E7EDA7A0017F2C2 /* Theme.swift */,
 				86E2F0611E7EDFA20017F2C2 /* displayGroupsViewController.swift */,
+				86EB9FF91E806CE50065C655 /* Pickup-Bridging-Header.h */,
 			);
 			path = Pickup;
 			sourceTree = "<group>";
@@ -234,6 +236,7 @@
 					867DBEF91E6CB09700A2D0FB = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 36HA7C4RHE;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					868853D81E7DA54000187790 = {
@@ -489,12 +492,15 @@
 			baseConfigurationReference = A9A8D7C90DF4376C25B961AE /* Pods-Pickup.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 36HA7C4RHE;
 				INFOPLIST_FILE = Pickup/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.screamgood.Pickup;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Pickup/Pickup-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -504,12 +510,14 @@
 			baseConfigurationReference = E6BB8552065F412E56A037E3 /* Pods-Pickup.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 36HA7C4RHE;
 				INFOPLIST_FILE = Pickup/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.screamgood.Pickup;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Pickup/Pickup-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

@@ -19,6 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UserDefaults.standard.set(nil, forKey: LocalData.tokenKey)
         UserDefaults.standard.synchronize()
         
+        //BuddyBuildSDK setup
+
+        BuddyBuildSDK.setup()
+        
         return true
     }
 

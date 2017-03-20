@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.3.0)
+  - BuddyBuildSDK (1.0.14)
   - Material (2.4.18):
     - Material/Core (= 2.4.18)
   - Material/Core (2.4.18)
@@ -7,14 +8,16 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - BuddyBuildSDK
   - Material
   - TKAutoCompleteTextField
 
 SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
+  BuddyBuildSDK: 2b2d35a61ad7fd3645beb2d48bc5123efd869918
   Material: 1523b6c85b1d18805da2cb28040000b40bcefc7e
   TKAutoCompleteTextField: 604afb75f8eddc96325fa43ddd26d5fb952ec106
 
-PODFILE CHECKSUM: 8ae7656aacb684c4ff210ffbc78393b74de15e87
+PODFILE CHECKSUM: 3685bc22ffcd43e9215c9703c38b0ab361ada36f
 
 COCOAPODS: 1.2.0
