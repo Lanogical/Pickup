@@ -9,6 +9,7 @@
 import UIKit
 import TKAutoCompleteTextField
 import Material
+import Motion
 
 class CustomGroupViewController: UIViewController, UITextFieldDelegate {
 
@@ -18,6 +19,8 @@ class CustomGroupViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var fourthTextField: TKAutoCompleteTextField!
     @IBOutlet var fifthTextField: TKAutoCompleteTextField!
     @IBOutlet var sixthTextField: TKAutoCompleteTextField!
+    
+    var aPosition: CGFloat = 0.0
     
     @IBOutlet var otherView: UIView!
     
@@ -33,21 +36,49 @@ class CustomGroupViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var fab: FabButton!
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
+        
         if textField == groupName {
             
         }else{
-            groupName.isEnabled = false
-            groupName.isHidden = true
-            groupName.alpha = 0
+            scroll.position.y = 190.0
             
-            scroll.position.y = 200.0
-            
-            print(scroll.position)
-            
-            print(scroll.alpha)
-            print(scroll.isHidden)
+            print(scroll.position.y)
             
             scroll.width = view.width
+            
+            if textField.text! == "Select a name from the list" {
+                textField.text = ""
+                scroll.position.y = 190.0
+            }
+        }
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField == groupName {
+            
+        }else{
+            if kids.contains(textField.text!) {
+                groupName.isEnabled = true
+                groupName.isHidden = false
+                groupName.alpha = 1
+                
+                scroll.position.y = aPosition
+                
+                print("a : \(aPosition)")
+                
+                scroll.width = self.view.width
+            }else{
+                textField.text = "Select a name from the list"
+                groupName.isEnabled = true
+                groupName.isHidden = false
+                groupName.alpha = 1
+                
+                scroll.position.y = aPosition
+                
+                print("a : \(aPosition)")
+                
+                scroll.width = self.view.width
+            }
         }
     }
     
@@ -76,13 +107,22 @@ class CustomGroupViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {   //delegate method
         textField.resignFirstResponder()
+        textFieldDidEndEditing(textField)
         return true
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("Test \(scroll.position.y)")
+
+        
         // Do any additional setup after loading the view.
         setupUI()
+        
+        scroll.backgroundColor = Theme.background
+        
+        aPosition = scroll.position.y
         
         self.view.backgroundColor = Theme.background
         
@@ -206,18 +246,10 @@ class CustomGroupViewController: UIViewController, UITextFieldDelegate {
     }
     
     func AnimatePartOne(){
-        UIView.animate(withDuration: 0.125, animations: {
-            self.firstTextField.x -= 10
-        }) { (succes) in
-            if succes {
-                self.AnimatePartTwo()
-            }
-        }
-    }
-    
-    func AnimatePartTwo(){
-        UIView.animate(withDuration: 0.125) { 
-            self.firstTextField.x += 10
+    UIView.animate(withDuration: 5.5, animations: {
+        self.firstTextField.placeholder = "Error"
+    }) { (bla) in
+        self.firstTextField.placeholder = "Kid 1"
         }
     }
     

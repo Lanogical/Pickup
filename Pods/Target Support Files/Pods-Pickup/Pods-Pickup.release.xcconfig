@@ -1,10 +1,10 @@
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
-FRAMEWORK_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/Alamofire" "$PODS_CONFIGURATION_BUILD_DIR/Material" "$PODS_CONFIGURATION_BUILD_DIR/TKAutoCompleteTextField" "${PODS_ROOT}/BuddyBuildSDK"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/Alamofire" "$PODS_CONFIGURATION_BUILD_DIR/FontAwesome.swift" "$PODS_CONFIGURATION_BUILD_DIR/Material" "$PODS_CONFIGURATION_BUILD_DIR/Motion" "$PODS_CONFIGURATION_BUILD_DIR/TKAutoCompleteTextField" "${PODS_ROOT}/BuddyBuildSDK"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/BuddyBuildSDK"
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited) -iquote "$PODS_CONFIGURATION_BUILD_DIR/Alamofire/Alamofire.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/Material/Material.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/TKAutoCompleteTextField/TKAutoCompleteTextField.framework/Headers" -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/BuddyBuildSDK"
-OTHER_LDFLAGS = $(inherited) -ObjC -framework "AVFoundation" -framework "Alamofire" -framework "BuddyBuildSDK" -framework "CoreMedia" -framework "CoreTelephony" -framework "CoreText" -framework "CoreVideo" -framework "Material" -framework "SystemConfiguration" -framework "TKAutoCompleteTextField"
+OTHER_CFLAGS = $(inherited) -iquote "$PODS_CONFIGURATION_BUILD_DIR/Alamofire/Alamofire.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/FontAwesome.swift/FontAwesome_swift.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/Material/Material.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/Motion/Motion.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/TKAutoCompleteTextField/TKAutoCompleteTextField.framework/Headers" -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/BuddyBuildSDK"
+OTHER_LDFLAGS = $(inherited) -ObjC -framework "AVFoundation" -framework "Alamofire" -framework "BuddyBuildSDK" -framework "CoreMedia" -framework "CoreTelephony" -framework "CoreText" -framework "CoreVideo" -framework "FontAwesome_swift" -framework "Material" -framework "Motion" -framework "SystemConfiguration" -framework "TKAutoCompleteTextField"
 OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
 PODS_BUILD_DIR = $BUILD_DIR
 PODS_CONFIGURATION_BUILD_DIR = $PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)

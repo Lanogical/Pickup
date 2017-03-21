@@ -31,6 +31,4 @@
 
 @property (nonatomic, strong) NSArray *suggestions;
 
-
-
 @end

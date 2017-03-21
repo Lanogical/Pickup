@@ -8,7 +8,7 @@
 
 #import "TKAutoCompleteTextField.h"
 
-static NSInteger kDefaultNumberOfVisibleRowInSuggestionView = 3;
+static NSInteger kDefaultNumberOfVisibleRowInSuggestionView = 5;
 static CGFloat kDefaultHeightForRowInSuggestionView = 30.f;
 static CGFloat kBufferHeightForSuggestionView = 15.f;
 
@@ -451,7 +451,7 @@ static CGFloat kDefaultTopMarginTextPlaceholder = 0.f;
     if ([self.autoCompleteDelegate respondsToSelector:@selector(TKAutoCompleteTextField:didSelectSuggestion:)]) {
         [self.autoCompleteDelegate TKAutoCompleteTextField:self didSelectSuggestion:suggestion];
     }
-
+    
     self.text = suggestion;
     self.inputFromSuggestion = YES;
     [self.suggestionView deselectRowAtIndexPath:indexPath animated:NO];

@@ -8,6 +8,7 @@
 
 import UIKit
 import Material
+import FontAwesome_swift
 
 class TeacherTableView: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -71,20 +72,44 @@ class TeacherTableView: UIViewController, UITableViewDelegate, UITableViewDataSo
         tableView.dataSource = self
     }
     
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // the cells you would like the actions to appear needs to be editable
-        return true
-    }
-    
+//    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+//        // the cells you would like the actions to appear needs to be editable
+//        return true
+//    }
+//    
+//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+//        // you need to implement this method too or you can't swipe to display the actions
+//        if editingStyle == .delete {
+//            APIRequests.removeKids(name: kids[indexPath.row])
+//            kids.remove(at: indexPath.row)
+//            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+//        }
+//    }
+
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        // you need to implement this method too or you can't swipe to display the actions
-        if editingStyle == .delete {
-            APIRequests.removeKids(name: kids[indexPath.row])
-            kids.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
-        }
+        
     }
     
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let called = UITableViewRowAction(style: .default, title: "Called") { (action, index) in
+            //Caleed
+            self.tableView.beginUpdates()
+            self.tableView.cellForRow(at: index)?.backgroundColor = Theme.secondary
+            self.tableView.reloadRows(at: [index], with: UITableViewRowAnimation.automatic)
+            self.tableView.endUpdates()
+        }
+        called.backgroundColor = Theme.secondary
+        if tableView.cellForRow(at: indexPath)?.backgroundColor == Theme.secondary {
+            let pickedup = UITableViewRowAction(style: .destructive, title: "✓") { (action, index) in
+                //Pickedup
+                APIRequests.removeKids(name: self.kids[indexPath.row])
+                self.kids.remove(at: index.row)
+                self.tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+            }
+            return [called, pickedup]
+        }
+        return [called]
+    }
     // number of rows in table view
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.kids.count

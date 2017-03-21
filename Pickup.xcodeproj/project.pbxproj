@@ -26,6 +26,7 @@
 		86AF565C1E7A1836009C5909 /* Kid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AF565B1E7A1836009C5909 /* Kid.swift */; };
 		86E2F05E1E7EDA7A0017F2C2 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E2F05D1E7EDA7A0017F2C2 /* Theme.swift */; };
 		86E2F0621E7EDFA20017F2C2 /* displayGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E2F0611E7EDFA20017F2C2 /* displayGroupsViewController.swift */; };
+		86EB9FFD1E80AFCD0065C655 /* CreateGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EB9FFC1E80AFCD0065C655 /* CreateGroup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		86E2F05D1E7EDA7A0017F2C2 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		86E2F0611E7EDFA20017F2C2 /* displayGroupsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = displayGroupsViewController.swift; sourceTree = "<group>"; };
 		86EB9FF91E806CE50065C655 /* Pickup-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pickup-Bridging-Header.h"; sourceTree = "<group>"; };
+		86EB9FFC1E80AFCD0065C655 /* CreateGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateGroup.swift; path = ../CreateGroup.swift; sourceTree = "<group>"; };
 		A9A8D7C90DF4376C25B961AE /* Pods-Pickup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pickup.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pickup/Pods-Pickup.debug.xcconfig"; sourceTree = "<group>"; };
 		E6BB8552065F412E56A037E3 /* Pods-Pickup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pickup.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pickup/Pods-Pickup.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,6 +128,7 @@
 		867DBEFC1E6CB09700A2D0FB /* Pickup */ = {
 			isa = PBXGroup;
 			children = (
+				86EB9FFC1E80AFCD0065C655 /* CreateGroup.swift */,
 				86AF56561E7A1711009C5909 /* Teachers */,
 				8676010A1E7605F80005CA51 /* API */,
 				867DBEFD1E6CB09700A2D0FB /* AppDelegate.swift */,
@@ -353,6 +356,7 @@
 				86E2F05E1E7EDA7A0017F2C2 /* Theme.swift in Sources */,
 				867DBF191E6CED4400A2D0FB /* HereViewController.swift in Sources */,
 				867601161E782DC90005CA51 /* CustomGroupViewController.swift in Sources */,
+				86EB9FFD1E80AFCD0065C655 /* CreateGroup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

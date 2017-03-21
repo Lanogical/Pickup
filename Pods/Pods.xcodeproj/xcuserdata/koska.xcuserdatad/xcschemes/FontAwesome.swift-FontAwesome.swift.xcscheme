@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '1A5F2345B3FB65DE86F12CE20B3FF947'
-               BlueprintName = 'TKAutoCompleteTextField'
+               BlueprintIdentifier = '77979430716929ED71E6E262A9F9A184'
+               BlueprintName = 'FontAwesome.swift-FontAwesome.swift'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'TKAutoCompleteTextField.framework'>
+               BuildableName = 'FontAwesome.swift.bundle'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

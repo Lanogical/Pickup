@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '1A5F2345B3FB65DE86F12CE20B3FF947'
-               BlueprintName = 'TKAutoCompleteTextField'
+               BlueprintIdentifier = '6E894DF1DFD12E2208FC1A7265D8E4E3'
+               BlueprintName = 'Motion'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'TKAutoCompleteTextField.framework'>
+               BuildableName = 'Motion.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

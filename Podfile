@@ -10,4 +10,6 @@ target 'Pickup' do
   pod 'Alamofire'
   pod 'TKAutoCompleteTextField'
   pod 'BuddyBuildSDK'
+  pod 'Motion'
+  pod 'FontAwesome.swift'
 end
