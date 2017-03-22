@@ -15,6 +15,8 @@ class TeacherTableView: UIViewController, UITableViewDelegate, UITableViewDataSo
     // Data model: These strings will be the data for the table view cells
     var kids: [String] = []
     
+    var calledKids: [IndexPath] = []
+    
     // cell reuse id (cells that scroll out of view can be reused)
     let cellReuseIdentifier = "kidCell"
     
@@ -29,7 +31,6 @@ class TeacherTableView: UIViewController, UITableViewDelegate, UITableViewDataSo
         }else{
             let alertController = UIAlertController(title: "Error: No Internet Connection", message:
                 "No Internet Connection: Please Connect to Internet and retry", preferredStyle: UIAlertControllerStyle.alert)
-//            alertController.addAction(UIAlertAction(title: "Retry", style: UIAlertActionStyle.default,handler: nil))
             alertController.addAction(UIAlertAction(title: "Retry", style: .default, handler: { (action) in
                 let cont = UIStoryboard(name: "Teachers", bundle: nil).instantiateInitialViewController()
                 self.present(cont!, animated: false, completion: nil)
@@ -71,20 +72,6 @@ class TeacherTableView: UIViewController, UITableViewDelegate, UITableViewDataSo
         tableView.delegate = self
         tableView.dataSource = self
     }
-    
-//    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-//        // the cells you would like the actions to appear needs to be editable
-//        return true
-//    }
-//    
-//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-//        // you need to implement this method too or you can't swipe to display the actions
-//        if editingStyle == .delete {
-//            APIRequests.removeKids(name: kids[indexPath.row])
-//            kids.remove(at: indexPath.row)
-//            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
-//        }
-//    }
 
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         
@@ -92,11 +79,9 @@ class TeacherTableView: UIViewController, UITableViewDelegate, UITableViewDataSo
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let called = UITableViewRowAction(style: .default, title: "Called") { (action, index) in
-            //Caleed
-            self.tableView.beginUpdates()
-            self.tableView.cellForRow(at: index)?.backgroundColor = Theme.secondary
+            //Called
+            self.calledKids.append(index)
             self.tableView.reloadRows(at: [index], with: UITableViewRowAnimation.automatic)
-            self.tableView.endUpdates()
         }
         called.backgroundColor = Theme.secondary
         if tableView.cellForRow(at: indexPath)?.backgroundColor == Theme.secondary {
@@ -106,7 +91,7 @@ class TeacherTableView: UIViewController, UITableViewDelegate, UITableViewDataSo
                 self.kids.remove(at: index.row)
                 self.tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
             }
-            return [called, pickedup]
+            return [pickedup]
         }
         return [called]
     }
@@ -120,7 +105,11 @@ class TeacherTableView: UIViewController, UITableViewDelegate, UITableViewDataSo
         
         // create a new cell if needed or reuse an old one
         let cell:UITableViewCell = self.tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier)! as UITableViewCell
-
+        for x in calledKids {
+            if x == indexPath {
+                cell.backgroundColor = Theme.secondary
+            }
+        }
         cell.textLabel?.text = self.kids[indexPath.row]
         
         return cell

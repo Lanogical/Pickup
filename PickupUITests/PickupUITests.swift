@@ -32,6 +32,7 @@ class PickupUITests: XCTestCase {
     func testTeacherLogin() {
         
         let app = XCUIApplication()
+        
         let emailTextField = app.textFields["Email"]
         emailTextField.tap()
         emailTextField.typeText("ben@koska.at")
