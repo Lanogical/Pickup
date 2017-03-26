@@ -61,6 +61,9 @@ class CreateGroup: UIViewController, UITextFieldDelegate{
         let groupString = groupArray.joined(separator: ", ")
         if groupName.text! != "" {
             APIRequests.createGroup(kids: groupString, name: groupName.text!)
+            for kid in groupArray {
+                APIRequests.logKid(kid, callback: {})
+            }
         }else{
             for kid in groupArray {
                 APIRequests.logKid(kid, callback: {})
