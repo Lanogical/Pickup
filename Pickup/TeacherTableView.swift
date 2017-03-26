@@ -80,13 +80,16 @@ class TeacherTableView: UIViewController, UITableViewDelegate, UITableViewDataSo
             self.calledKids.append(index)
             self.tableView.reloadRows(at: [index], with: UITableViewRowAnimation.automatic)
         }
+        
         called.backgroundColor = Theme.secondary
+        
         if tableView.cellForRow(at: indexPath)?.backgroundColor == Theme.secondary {
             let pickedup = UITableViewRowAction(style: .destructive, title: "✓") { (action, index) in
                 //Pickedup
                 APIRequests.removeKids(name: self.kids[indexPath.row])
                 self.kids.remove(at: index.row)
                 self.tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+                self.calledKids.remove(at: index.row)
             }
             pickedup.backgroundColor = Color.blueGrey.base
             return [pickedup]
