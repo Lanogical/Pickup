@@ -8,7 +8,6 @@
 
 import UIKit
 import Material
-import FontAwesome_swift
 
 class TeacherTableView: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -42,11 +41,13 @@ class TeacherTableView: UIViewController, UITableViewDelegate, UITableViewDataSo
     }
     
     func updateFrame() {
-        kids = []
+        self.kids = []
         APIRequests.pickedup { (kids) in
             for kid in kids {
                 self.kids.append(kid["name"]! as! String)
+                print(kid["token"] as! String)
             }
+            self.kids = APIRequests.removeDuplicates(array: self.kids)
             self.tableView.reloadData()
         }
     }
@@ -56,12 +57,7 @@ class TeacherTableView: UIViewController, UITableViewDelegate, UITableViewDataSo
         
         timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(updateFrame), userInfo: nil, repeats: true)
         
-        APIRequests.pickedup { (kids) in
-            for kid in kids {
-                self.kids.append(kid["name"]! as! String)
-            }
-            self.tableView.reloadData()
-        }
+        updateFrame()
         
         
         
@@ -78,6 +74,7 @@ class TeacherTableView: UIViewController, UITableViewDelegate, UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        
         let called = UITableViewRowAction(style: .default, title: "Called") { (action, index) in
             //Called
             self.calledKids.append(index)
@@ -91,6 +88,7 @@ class TeacherTableView: UIViewController, UITableViewDelegate, UITableViewDataSo
                 self.kids.remove(at: index.row)
                 self.tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
             }
+            pickedup.backgroundColor = Color.blueGrey.base
             return [pickedup]
         }
         return [called]

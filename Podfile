@@ -12,4 +12,5 @@ target 'Pickup' do
   pod 'BuddyBuildSDK'
   pod 'Motion'
   pod 'FontAwesome.swift'
+  pod 'DropDown'
 end

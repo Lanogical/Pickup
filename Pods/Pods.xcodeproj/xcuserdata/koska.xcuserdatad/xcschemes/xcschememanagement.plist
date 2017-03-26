@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>DropDown.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>FontAwesome.swift-FontAwesome.swift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -52,7 +57,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1A5F2345B3FB65DE86F12CE20B3FF947</key>
+		<key>0C79931841E4862BCEF13B8A4CAEB4AD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -67,6 +72,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>5168099F2EBFC99A707C03C9EADE01A5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>6E894DF1DFD12E2208FC1A7265D8E4E3</key>
 		<dict>
 			<key>primary</key>
@@ -77,12 +87,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
+		<key>7E3A86D2B49ECC6E8098D7BDC3250CC8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9C47153C5073CF35D074DB5D0EA78C59</key>
+		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
 		<dict>
 			<key>primary</key>
 			<true/>

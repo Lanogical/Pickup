@@ -28,12 +28,17 @@ class HereViewController: UIViewController, UIPickerViewDataSource, UIPickerView
         }
         if selected != "Other" && kidData.isEmpty == false{
             var newGroup: [String] = []
+            
             for x in kidData[currentRow] {
                 APIRequests.logKid(x, callback: {})
                 newGroup.append(x)
             }
             
+            print(newGroup)
+            
              let groupString = newGroup.joined(separator: ", ")
+            
+            print(groupString)
             
             let cont = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "showGroup") as! displayGroupsViewController
             cont.groupText = groupString
@@ -75,7 +80,7 @@ class HereViewController: UIViewController, UIPickerViewDataSource, UIPickerView
         }
         let token = UserDefaults.standard.string(forKey: LocalData.tokenKey)
         APIRequests.getGroups(token: token!) { (output) in
-            
+            print(output)
             self.kidData = []
             self.data = []
             var currentKidData: [String] = []

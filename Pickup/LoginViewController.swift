@@ -19,7 +19,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        usernameField.autocorrectionType = .no
+        
         setupUI()
+        
         
         errorField.text = ""
         

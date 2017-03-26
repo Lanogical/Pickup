@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '0C79931841E4862BCEF13B8A4CAEB4AD'
-               BlueprintName = 'TKAutoCompleteTextField'
+               BlueprintIdentifier = '5168099F2EBFC99A707C03C9EADE01A5'
+               BlueprintName = 'DropDown'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'TKAutoCompleteTextField.framework'>
+               BuildableName = 'DropDown.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

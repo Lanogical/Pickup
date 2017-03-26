@@ -7,19 +7,91 @@
 //
 
 import UIKit
+import Material
 
 class CreateGroup: UIViewController, UITextFieldDelegate{
+    
+    var kids: [String] = []
+    var groupArray: [String] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.kidsTextField.delegate = self
+        doneButton.isEnabled = false
+        
+        kidsTextField.autocorrectionType = .no
+        
+        APIRequests.getKids { (kids) in
+            self.kidsSelectTableView.data = []
+            for kid in kids {
+                self.kidsSelectTableView.data.append(kid["name"]!)
+            }
+            self.kidsSelectTableView.reloadData()
+            self.kidsSelectTableView.normalData = self.kidsSelectTableView.data
+        }
+        
+        hideSearchDown()
+        
+        kidsSelectTableView.textField = kidsTextField
+        
+        self.kidsLabel.text = ""
+        
+        kidsTextField.delegate = self
+        
+        kidsTextField.addTarget(self, action: #selector(showSearchDown), for: UIControlEvents.touchDown)
+        
+        kidsTextField.addTarget(self, action: #selector(updateNow), for: UIControlEvents.editingChanged)
+        
+        doneButton.backgroundColor = Theme.secondary.withAlphaComponent(0.55)
+        doneButton.titleColor = Color.white
+    }
+    
+    @IBOutlet var groupName: TextField!
+    
+    @IBOutlet var doneButton: FlatButton!
+    
+    
+    @IBAction func doneClicked(_ sender: Any) {
+        let groupString = groupArray.joined(separator: ", ")
+        if groupName.text! != "" {
+            APIRequests.createGroup(kids: groupString, name: groupName.text!)
+        }else{
+            for kid in groupArray {
+                APIRequests.logKid(kid, callback: {})
+            }
+        }
+        
+        let cont = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "showGroup") as! displayGroupsViewController
+        cont.groupText = groupString
+        present(cont, animated: true, completion: nil)
+        
+    }
+    func updateNow() {
+        kidsSelectTableView.updateData(new: kidsTextField.text!)
+    }
+    
+    func showSearchDown() {
+        kidsSelectTableView.alpha = 1
+    }
+    
+    func hideSearchDown() {
+        kidsSelectTableView.alpha = 0
     }
 
-    @IBOutlet var kidsTextField: UITextField!
+    @IBOutlet var kidsTextField: SearchDownTextField!
     @IBOutlet var kidsLabel: UILabel!
     
+    @IBOutlet var kidsSelectTableView: SearchDownTableView!
+    
     @IBAction func addClicked(_ sender: Any) {
-        kidsLabel.text!.append("\(kidsTextField.text!) \n")
+        if kidsTextField.text! != "" {
+            kidsLabel.text!.append("\(kidsTextField.text!) \n")
+            groupArray.append(kidsTextField.text!)
+        }
+        kidsTextField.text = ""
+        
+        doneButton.isEnabled = true
+        doneButton.backgroundColor = Theme.secondary.withAlphaComponent(1)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {   //delegate method

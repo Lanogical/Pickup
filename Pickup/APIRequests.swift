@@ -15,9 +15,12 @@ class APIRequests {
         
     static func logKid(_ name: String, callback: @escaping () -> Void) {
         let url = baseurl + "/picked/add"
+        let token = UserDefaults.standard.string(forKey: LocalData.tokenKey)
         let headers: HTTPHeaders = [
-            "name": name
+            "name": name,
+            "token": token!
         ]
+        
         Alamofire.request(url, method: .post, headers: headers).responseJSON { (response) in
             if response.error != nil {
                 APIRequests.logKid(name, callback: callback)
@@ -100,6 +103,23 @@ class APIRequests {
                 APIRequests.handleKidsData(JSON, call: callback)
             }
         }
+    }
+    
+    static func removeDuplicates(array: [String]) -> [String] {
+        var encountered = Set<String>()
+        var result: [String] = []
+        for value in array {
+            if encountered.contains(value) {
+                // Do not add a duplicate element.
+            }
+            else {
+                // Add value to the set.
+                encountered.insert(value)
+                // ... Append the value.
+                result.append(value)
+            }
+        }
+        return result
     }
     
     static func handleKidsData(_ data: Any?, call: @escaping (_ data: [[String: String]]) -> Void) {

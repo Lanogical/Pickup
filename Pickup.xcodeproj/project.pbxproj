@@ -24,6 +24,9 @@
 		86AF56551E7A0EF0009C5909 /* Teachers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86AF56541E7A0EF0009C5909 /* Teachers.storyboard */; };
 		86AF565A1E7A1766009C5909 /* TeacherTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AF56591E7A1766009C5909 /* TeacherTableView.swift */; };
 		86AF565C1E7A1836009C5909 /* Kid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AF565B1E7A1836009C5909 /* Kid.swift */; };
+		86C922F31E87370700DADC65 /* SearchDownTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C922F21E87370700DADC65 /* SearchDownTableViewCell.swift */; };
+		86C922F51E87377200DADC65 /* SearchDownTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C922F41E87377200DADC65 /* SearchDownTableView.swift */; };
+		86C922F91E873B3300DADC65 /* SearchDownTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C922F81E873B3300DADC65 /* SearchDownTextField.swift */; };
 		86E2F05E1E7EDA7A0017F2C2 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E2F05D1E7EDA7A0017F2C2 /* Theme.swift */; };
 		86E2F0621E7EDFA20017F2C2 /* displayGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E2F0611E7EDFA20017F2C2 /* displayGroupsViewController.swift */; };
 		86EB9FFD1E80AFCD0065C655 /* CreateGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EB9FFC1E80AFCD0065C655 /* CreateGroup.swift */; };
@@ -61,6 +64,9 @@
 		86AF56541E7A0EF0009C5909 /* Teachers.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Teachers.storyboard; sourceTree = "<group>"; };
 		86AF56591E7A1766009C5909 /* TeacherTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherTableView.swift; sourceTree = "<group>"; };
 		86AF565B1E7A1836009C5909 /* Kid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kid.swift; sourceTree = "<group>"; };
+		86C922F21E87370700DADC65 /* SearchDownTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDownTableViewCell.swift; sourceTree = "<group>"; };
+		86C922F41E87377200DADC65 /* SearchDownTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDownTableView.swift; sourceTree = "<group>"; };
+		86C922F81E873B3300DADC65 /* SearchDownTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDownTextField.swift; sourceTree = "<group>"; };
 		86E2F05D1E7EDA7A0017F2C2 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		86E2F0611E7EDFA20017F2C2 /* displayGroupsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = displayGroupsViewController.swift; sourceTree = "<group>"; };
 		86EB9FF91E806CE50065C655 /* Pickup-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pickup-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -128,6 +134,7 @@
 		867DBEFC1E6CB09700A2D0FB /* Pickup */ = {
 			isa = PBXGroup;
 			children = (
+				86C922EF1E8736B900DADC65 /* SearchDown */,
 				86EB9FFC1E80AFCD0065C655 /* CreateGroup.swift */,
 				86AF56561E7A1711009C5909 /* Teachers */,
 				8676010A1E7605F80005CA51 /* API */,
@@ -175,6 +182,16 @@
 				86AF565B1E7A1836009C5909 /* Kid.swift */,
 			);
 			name = Teachers;
+			sourceTree = "<group>";
+		};
+		86C922EF1E8736B900DADC65 /* SearchDown */ = {
+			isa = PBXGroup;
+			children = (
+				86C922F21E87370700DADC65 /* SearchDownTableViewCell.swift */,
+				86C922F41E87377200DADC65 /* SearchDownTableView.swift */,
+				86C922F81E873B3300DADC65 /* SearchDownTextField.swift */,
+			);
+			name = SearchDown;
 			sourceTree = "<group>";
 		};
 		A286803CE762479532FF250C /* Frameworks */ = {
@@ -344,14 +361,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				8608584C1E78A01F00D08970 /* LocalData.swift in Sources */,
+				86C922F31E87370700DADC65 /* SearchDownTableViewCell.swift in Sources */,
 				86AF565C1E7A1836009C5909 /* Kid.swift in Sources */,
 				8608584A1E78571400D08970 /* AppSnackbarController.swift in Sources */,
 				867DBF101E6CB2F000A2D0FB /* LoginViewController.swift in Sources */,
+				86C922F51E87377200DADC65 /* SearchDownTableView.swift in Sources */,
 				8676010C1E76066A0005CA51 /* APIRequests.swift in Sources */,
 				86AF565A1E7A1766009C5909 /* TeacherTableView.swift in Sources */,
 				867DBF001E6CB09700A2D0FB /* ViewController.swift in Sources */,
 				867DBEFE1E6CB09700A2D0FB /* AppDelegate.swift in Sources */,
 				86E2F0621E7EDFA20017F2C2 /* displayGroupsViewController.swift in Sources */,
+				86C922F91E873B3300DADC65 /* SearchDownTextField.swift in Sources */,
 				867DBF171E6CC64900A2D0FB /* ParentHomeViewController.swift in Sources */,
 				86E2F05E1E7EDA7A0017F2C2 /* Theme.swift in Sources */,
 				867DBF191E6CED4400A2D0FB /* HereViewController.swift in Sources */,

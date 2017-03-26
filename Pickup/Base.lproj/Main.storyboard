@@ -249,7 +249,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BlF-2f-4vh">
                                 <rect key="frame" x="16" y="84" width="343" height="32"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hrF-N9-alz">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hrF-N9-alz" customClass="SearchDownTextField" customModule="Pickup" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="319" height="32"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -282,15 +282,65 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1Fu-lC-Nt0" customClass="SearchDownTableView" customModule="Pickup" customModuleProvider="target">
+                                <rect key="frame" x="16" y="116" width="343" height="184"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="184" id="mQ5-zT-Rqv"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchDownCell" id="f9k-yF-bBX" customClass="SearchDownTableViewCell" customModule="Pickup" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="f9k-yF-bBX" id="EFT-Wj-Odg">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hHs-2Z-3NX">
+                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="hHs-2Z-3NX" secondAttribute="trailing" id="4hk-il-EXq"/>
+                                                <constraint firstItem="hHs-2Z-3NX" firstAttribute="leading" secondItem="EFT-Wj-Odg" secondAttribute="leading" id="5us-nC-FYe"/>
+                                                <constraint firstAttribute="bottom" secondItem="hHs-2Z-3NX" secondAttribute="bottom" id="NYo-Bu-dc1"/>
+                                                <constraint firstItem="hHs-2Z-3NX" firstAttribute="top" secondItem="EFT-Wj-Odg" secondAttribute="top" id="er7-JL-CVY"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="title" destination="hHs-2Z-3NX" id="U2A-S9-KF4"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ma-gz-eMg" customClass="FlatButton" customModule="Material">
+                                <rect key="frame" x="80" y="571" width="215" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="RE5-sm-1OU"/>
+                                </constraints>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="doneClicked:" destination="hkE-5e-ye4" eventType="touchUpInside" id="tas-K1-K0v"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="5Ma-gz-eMg" secondAttribute="trailing" constant="64" id="4b4-8v-QjM"/>
                             <constraint firstItem="ulx-bE-uRm" firstAttribute="top" secondItem="xhM-aY-dvS" secondAttribute="bottom" constant="64" id="6qX-6h-IlZ"/>
                             <constraint firstItem="pzh-33-fgl" firstAttribute="leading" secondItem="myU-Jx-227" secondAttribute="leadingMargin" id="BxI-Ca-YxL"/>
+                            <constraint firstItem="5Ma-gz-eMg" firstAttribute="leading" secondItem="myU-Jx-227" secondAttribute="leadingMargin" constant="64" id="Cfb-0o-7OO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xhM-aY-dvS" secondAttribute="trailing" constant="16" id="HP2-FA-4H7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1Fu-lC-Nt0" secondAttribute="trailing" id="PDj-lj-7nB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="BlF-2f-4vh" secondAttribute="trailing" id="R2a-4J-Pci"/>
+                            <constraint firstItem="1Fu-lC-Nt0" firstAttribute="top" secondItem="BlF-2f-4vh" secondAttribute="bottom" id="XE4-m4-Rhm"/>
+                            <constraint firstItem="1Fu-lC-Nt0" firstAttribute="leading" secondItem="myU-Jx-227" secondAttribute="leadingMargin" id="YQg-aC-nPV"/>
                             <constraint firstAttribute="trailingMargin" secondItem="pzh-33-fgl" secondAttribute="trailing" constant="8" id="dsw-Mx-XsS"/>
                             <constraint firstItem="BlF-2f-4vh" firstAttribute="top" secondItem="pzh-33-fgl" secondAttribute="bottom" constant="16" id="fDu-vB-CWv"/>
+                            <constraint firstItem="ulx-bE-uRm" firstAttribute="top" secondItem="5Ma-gz-eMg" secondAttribute="bottom" constant="32" id="fY7-Zv-Szn"/>
                             <constraint firstItem="xhM-aY-dvS" firstAttribute="top" secondItem="BlF-2f-4vh" secondAttribute="bottom" constant="16" id="j3m-No-yJQ"/>
                             <constraint firstItem="BlF-2f-4vh" firstAttribute="leading" secondItem="myU-Jx-227" secondAttribute="leadingMargin" id="juA-PJ-fFG"/>
                             <constraint firstItem="pzh-33-fgl" firstAttribute="top" secondItem="ohy-GE-RYI" secondAttribute="bottom" constant="16" id="pOe-Np-FEJ"/>
@@ -298,7 +348,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="doneButton" destination="5Ma-gz-eMg" id="XGA-zW-Z8V"/>
+                        <outlet property="groupName" destination="pzh-33-fgl" id="l2o-5i-WDe"/>
                         <outlet property="kidsLabel" destination="xhM-aY-dvS" id="A4w-ef-o1O"/>
+                        <outlet property="kidsSelectTableView" destination="1Fu-lC-Nt0" id="rnH-AO-fYp"/>
                         <outlet property="kidsTextField" destination="hrF-N9-alz" id="ggy-Ny-EEp"/>
                     </connections>
                 </viewController>
