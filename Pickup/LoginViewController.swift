@@ -44,8 +44,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBAction func loginClicked(_ sender: Any) {
         APIRequests.login(usernameField.text!, pwd: passwordField.text!) { (dict) in
             if dict["succes"] as! Bool == true {
+                APIRequests.getNameForToken(dict["token"] as! String , args: 0, callback: { (name, dory) in
+                    UserDefaults.standard.set(name, forKey: "Name")
+                    UserDefaults.standard.synchronize()
+                })
                 UserDefaults.standard.set(dict["token"], forKey: LocalData.tokenKey)
-                UserDefaults.standard.synchronize()
 
                 if dict["rank"] as! String == "parent" {
                     let contrer = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "hereController")
@@ -108,8 +111,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         textField.resignFirstResponder()
         APIRequests.login(usernameField.text!, pwd: passwordField.text!) { (dict) in
             if dict["succes"] as! Bool == true {
+                APIRequests.getNameForToken(dict["token"] as! String , args: 0, callback: { (name, dory) in
+                    UserDefaults.standard.set(name, forKey: "Name")
+                    UserDefaults.standard.synchronize()
+                })
                 UserDefaults.standard.set(dict["token"], forKey: LocalData.tokenKey)
-                UserDefaults.standard.synchronize()
                 
                 if dict["rank"] as! String == "parent" {
                     let contrer = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "hereController")

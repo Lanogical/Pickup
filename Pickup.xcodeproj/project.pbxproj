@@ -23,7 +23,6 @@
 		868853DC1E7DA54000187790 /* PickupUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868853DB1E7DA54000187790 /* PickupUITests.swift */; };
 		86AF56551E7A0EF0009C5909 /* Teachers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86AF56541E7A0EF0009C5909 /* Teachers.storyboard */; };
 		86AF565A1E7A1766009C5909 /* TeacherTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AF56591E7A1766009C5909 /* TeacherTableView.swift */; };
-		86AF565C1E7A1836009C5909 /* Kid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AF565B1E7A1836009C5909 /* Kid.swift */; };
 		86C922F31E87370700DADC65 /* SearchDownTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C922F21E87370700DADC65 /* SearchDownTableViewCell.swift */; };
 		86C922F51E87377200DADC65 /* SearchDownTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C922F41E87377200DADC65 /* SearchDownTableView.swift */; };
 		86C922F91E873B3300DADC65 /* SearchDownTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C922F81E873B3300DADC65 /* SearchDownTextField.swift */; };
@@ -63,7 +62,6 @@
 		868853DD1E7DA54000187790 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86AF56541E7A0EF0009C5909 /* Teachers.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Teachers.storyboard; sourceTree = "<group>"; };
 		86AF56591E7A1766009C5909 /* TeacherTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherTableView.swift; sourceTree = "<group>"; };
-		86AF565B1E7A1836009C5909 /* Kid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kid.swift; sourceTree = "<group>"; };
 		86C922F21E87370700DADC65 /* SearchDownTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDownTableViewCell.swift; sourceTree = "<group>"; };
 		86C922F41E87377200DADC65 /* SearchDownTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDownTableView.swift; sourceTree = "<group>"; };
 		86C922F81E873B3300DADC65 /* SearchDownTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDownTextField.swift; sourceTree = "<group>"; };
@@ -179,7 +177,6 @@
 			isa = PBXGroup;
 			children = (
 				86AF56591E7A1766009C5909 /* TeacherTableView.swift */,
-				86AF565B1E7A1836009C5909 /* Kid.swift */,
 			);
 			name = Teachers;
 			sourceTree = "<group>";
@@ -362,7 +359,6 @@
 			files = (
 				8608584C1E78A01F00D08970 /* LocalData.swift in Sources */,
 				86C922F31E87370700DADC65 /* SearchDownTableViewCell.swift in Sources */,
-				86AF565C1E7A1836009C5909 /* Kid.swift in Sources */,
 				8608584A1E78571400D08970 /* AppSnackbarController.swift in Sources */,
 				867DBF101E6CB2F000A2D0FB /* LoginViewController.swift in Sources */,
 				86C922F51E87377200DADC65 /* SearchDownTableView.swift in Sources */,

@@ -12,10 +12,28 @@ import Alamofire
 
 class APIRequests {
     static let baseurl = "http://news.cloudapp.net"
+    
+    static func getNameForToken(_ token: String, args: Int, callback: @escaping (_ name: String, _ args: Int) -> Void) {
+        let url = baseurl + "/users/name"
+        let headers: HTTPHeaders = [
+            "token": token
+        ]
         
+        Alamofire.request(url, method: .post, headers: headers).responseJSON { (response) in
+            if response.error != nil {
+                APIRequests.getNameForToken(token, args: args, callback: callback)
+            }
+            
+            if let JSON = response.result.value {
+                let dict = JSON as! [String: String]
+                callback(dict["name"]!, args)
+            }
+        }
+    }
+    
     static func logKid(_ name: String, callback: @escaping () -> Void) {
         let url = baseurl + "/picked/add"
-        let token = UserDefaults.standard.string(forKey: LocalData.tokenKey)
+        let token = UserDefaults.standard.string(forKey: "Name")
         let headers: HTTPHeaders = [
             "name": name,
             "token": token!
