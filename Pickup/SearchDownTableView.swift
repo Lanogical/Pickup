@@ -13,6 +13,8 @@ class SearchDownTableView: UITableView {
     
     var normalData: [String] = []
     
+    var superViewController: CreateGroup = CreateGroup()
+    
     var textField: SearchDownTextField = SearchDownTextField()
     
     let reuseIdentifier = "searchDownCell"
@@ -41,6 +43,7 @@ extension SearchDownTableView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.alpha = 0
         textField.text = data[indexPath.row]
+        superViewController.updateNow()
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

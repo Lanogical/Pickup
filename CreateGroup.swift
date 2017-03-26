@@ -17,6 +17,8 @@ class CreateGroup: UIViewController, UITextFieldDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        kidsSelectTableView.superViewController = self
+        
         doneButton.isEnabled = false
         
         kidsTextField.autocorrectionType = .no
@@ -44,7 +46,11 @@ class CreateGroup: UIViewController, UITextFieldDelegate{
         
         doneButton.backgroundColor = Theme.secondary.withAlphaComponent(0.55)
         doneButton.titleColor = Color.white
+        
+        addButton.isEnabled = false
     }
+    
+    @IBOutlet var addButton: UIButton!
     
     @IBOutlet var groupName: TextField!
     
@@ -66,7 +72,13 @@ class CreateGroup: UIViewController, UITextFieldDelegate{
         present(cont, animated: true, completion: nil)
         
     }
+    
     func updateNow() {
+        if kidsSelectTableView.data.contains(kidsTextField.text!) && !(kidsLabel.text!.contains(kidsTextField.text!)){
+            addButton.isEnabled = true
+        }else{
+            addButton.isEnabled = false
+        }
         kidsSelectTableView.updateData(new: kidsTextField.text!)
     }
     
@@ -88,10 +100,17 @@ class CreateGroup: UIViewController, UITextFieldDelegate{
             kidsLabel.text!.append("\(kidsTextField.text!) \n")
             groupArray.append(kidsTextField.text!)
         }
+        
         kidsTextField.text = ""
         
         doneButton.isEnabled = true
         doneButton.backgroundColor = Theme.secondary.withAlphaComponent(1)
+    
+        kidsSelectTableView.data = kidsSelectTableView.normalData
+        kidsSelectTableView.reloadData()
+        showSearchDown()
+        
+        updateNow()
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {   //delegate method
