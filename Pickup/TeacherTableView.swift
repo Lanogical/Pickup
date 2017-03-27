@@ -50,6 +50,8 @@ class TeacherTableViewController: UITableViewController {
         guard token != "" else { return }
         guard token != "about: blank" else { return }
         
+        kids = APIRequests.removeDuplicates(array: kids)
+        
         data.append(ParentSection(sectionName: token, kids: kids))
         
     }
