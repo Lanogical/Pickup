@@ -54,6 +54,19 @@ class APIRequests {
             }
         }
     }
+    
+    static func callKid(_ name: String) {
+        let url = baseurl + "/pickedup/call"
+        let headers: HTTPHeaders = [
+            "name": name
+        ]
+        Alamofire.request(url, method: .post, headers: headers).responseJSON { (response) in
+            if response.error != nil {
+                APIRequests.callKid(name)
+            }
+        }
+    }
+    
     static func loginWithToken(_ token: String, callback: @escaping (_ succes: Bool,_ rank: String) -> Void) {
         let url = baseurl + "/users/token/check"
         let headers: HTTPHeaders = [

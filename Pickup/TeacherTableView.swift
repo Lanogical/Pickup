@@ -11,14 +11,19 @@ import Material
 
 class TeacherTableViewController: UITableViewController {
     
+    struct Kid {
+        var name: String!
+        var status: String!
+    }
+    
     struct ParentSection {
         var sectionName: String!
-        var kids: [String]!
+        var kids: [Kid]!
     }
     
     var calledKids: [IndexPath] = []
     
-    var kidsOfParent: [String] = []
+    var kidsOfParent: [Kid] = []
     
     var data: [ParentSection] = []
     
@@ -45,16 +50,14 @@ class TeacherTableViewController: UITableViewController {
         
     }
     
-    func preccesKidsOfParent(_ kids: [String], token: String) {
-        guard kids != [] else { return }
+    func preccesKidsOfParent(_ kids: [Kid], token: String) {
         guard token != "" else { return }
         guard token != "about: blank" else { return }
-        
-        var kidos = kids
-        
-        kidos = APIRequests.removeDuplicates(array: kids)
-        
-        data.append(ParentSection(sectionName: token, kids: kidos))
+        if kids.isEmpty {
+            return
+        } else {
+            data.append(ParentSection(sectionName: token, kids: kids))
+        }
         
     }
     
@@ -64,6 +67,8 @@ class TeacherTableViewController: UITableViewController {
         
         var currentToken = "about: blank"
         
+        var currentKid = Kid()
+        
         for kid in kidsToProcces {
             if currentToken == "about: blank" || currentToken != kid["token"]! as! String {
                 preccesKidsOfParent(kidsOfParent, token: currentToken)
@@ -71,7 +76,7 @@ class TeacherTableViewController: UITableViewController {
                 currentToken = kid["token"]! as! String
             }
             
-            kidsOfParent.append(kid["name"]! as! String)
+            kidsOfParent.append(Kid(name: kid["name"]! as! String, status: kid["status"]! as! String))
         }
         
         preccesKidsOfParent(kidsOfParent, token: currentToken)
@@ -95,6 +100,7 @@ class TeacherTableViewController: UITableViewController {
         let called = UITableViewRowAction(style: .default, title: "Called") { (action, index) in
             //Called
             self.calledKids.append(index)
+            APIRequests.callKid((tableView.cellForRow(at: indexPath)?.textLabel?.text!)!)
             self.tableView.reloadRows(at: [index], with: UITableViewRowAnimation.automatic)
         }
         
@@ -147,7 +153,13 @@ class TeacherTableViewController: UITableViewController {
             }
         }
         
-        cell?.textLabel?.text = data[indexPath.section].kids[indexPath.row]
+        if data[indexPath.section].kids[indexPath.row].status == "C" {
+            cell?.backgroundColor = Theme.secondary
+        }
+        
+        
+        
+        cell?.textLabel?.text = data[indexPath.section].kids[indexPath.row].name
         
         return cell!
     }

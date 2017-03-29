@@ -17,6 +17,8 @@ class CreateGroup: UIViewController, UITextFieldDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         kidsSelectTableView.superViewController = self
         
         doneButton.isEnabled = false
@@ -37,6 +39,8 @@ class CreateGroup: UIViewController, UITextFieldDelegate{
         kidsSelectTableView.textField = kidsTextField
         
         self.kidsLabel.text = ""
+        
+        kidsTextField.placeholder = "Kid's name"
         
         kidsTextField.delegate = self
         
@@ -111,6 +115,7 @@ class CreateGroup: UIViewController, UITextFieldDelegate{
     
         kidsSelectTableView.data = kidsSelectTableView.normalData
         kidsSelectTableView.reloadData()
+        
         showSearchDown()
         
         updateNow()
