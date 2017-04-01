@@ -114,6 +114,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Dnf-Qw-0Mm">
+            <objects>
+                <viewController restorationIdentifier="createGroup" storyboardIdentifier="createGroup" id="dL6-Aw-4yR" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gkQ-Mz-xYm"/>
+                        <viewControllerLayoutGuide type="bottom" id="D2e-M7-ode"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fxl-jF-Lx4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T2l-gY-wgg">
+                                <rect key="frame" x="48" y="52" width="279" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="Mwk-3d-nMy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BgO-cq-Bq1" customClass="FlatButton" customModule="Material">
+                                <rect key="frame" x="32" y="571" width="311" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="QWF-hx-rrU"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="zxs-Kw-q0J"/>
+                                </constraints>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <segue destination="pJS-Fh-wVT" kind="show" id="oST-Qm-odD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="BgO-cq-Bq1" secondAttribute="trailing" constant="32" id="21V-bf-KPX"/>
+                            <constraint firstItem="BgO-cq-Bq1" firstAttribute="leading" secondItem="fxl-jF-Lx4" secondAttribute="leading" constant="32" id="HNt-EO-PNo"/>
+                            <constraint firstItem="D2e-M7-ode" firstAttribute="top" secondItem="BgO-cq-Bq1" secondAttribute="bottom" constant="64" id="ZE0-R3-b5v"/>
+                            <constraint firstItem="T2l-gY-wgg" firstAttribute="leading" secondItem="fxl-jF-Lx4" secondAttribute="leadingMargin" constant="32" id="bJF-aX-oD8"/>
+                            <constraint firstItem="BgO-cq-Bq1" firstAttribute="centerX" secondItem="fxl-jF-Lx4" secondAttribute="centerX" id="fyw-cL-uW0"/>
+                            <constraint firstItem="T2l-gY-wgg" firstAttribute="top" secondItem="gkQ-Mz-xYm" secondAttribute="bottom" constant="32" id="kzx-gi-JkC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="T2l-gY-wgg" secondAttribute="trailing" constant="32" id="x9M-Zl-tcf"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TgD-c5-Nmf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1874" y="232"/>
+        </scene>
         <!--Display Groups View Controller-->
         <scene sceneID="Lc3-e6-962">
             <objects>
@@ -293,7 +342,7 @@
                                         <rect key="frame" x="0.0" y="28" width="343" height="24"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="f9k-yF-bBX" id="EFT-Wj-Odg">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="23"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="24"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hHs-2Z-3NX">
@@ -366,4 +415,7 @@
     <resources>
         <image name="color_aceraLogo" width="282" height="60"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="oST-Qm-odD"/>
+    </inferredMetricsTieBreakers>
 </document>
