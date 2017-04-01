@@ -29,41 +29,6 @@ class PickupUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testTeacherLogin() {
-        
-        let app = XCUIApplication()
-        
-        let emailTextField = app.textFields["Email"]
-        emailTextField.tap()
-        emailTextField.typeText("ben@koska.at")
-        
-        let passwordSecureTextField = app.secureTextFields["Password"]
-        passwordSecureTextField.tap()
-        passwordSecureTextField.typeText("1234")
-        
-        let loginButton = app.buttons["Login"]
-        loginButton.tap()
-        
-        XCTAssert(app.staticTexts["Title"].exists)
-    }
-    
-    func testParentLogin() {
-        
-        let app = XCUIApplication()
-        let emailTextField = app.textFields["Email"]
-        emailTextField.tap()
-        emailTextField.typeText("sedat@koska.at")
-        
-        let passwordSecureTextField = app.secureTextFields["Password"]
-        passwordSecureTextField.tap()
-        passwordSecureTextField.typeText("1234")
-        
-        let loginButton = app.buttons["Login"]
-        loginButton.tap()
-        
-        XCTAssert(app.buttons["Arriving"].exists)
-    }
-    
     func testIncorrectEmail() {
         let app = XCUIApplication()
         let emailTextField = app.textFields["Email"]
@@ -94,24 +59,6 @@ class PickupUITests: XCTestCase {
         loginButton.tap()
         
         XCTAssert(app.staticTexts["Incorrect Email/Password"].exists)
-    }
-    
-    func testLogoout() {
-        let app = XCUIApplication()
-        let emailTextField = app.textFields["Email"]
-        emailTextField.tap()
-        emailTextField.typeText("sedat@koska.at")
-        
-        let passwordSecureTextField = app.secureTextFields["Password"]
-        passwordSecureTextField.tap()
-        passwordSecureTextField.typeText("1234")
-        
-        let loginButton = app.buttons["Login"]
-        loginButton.tap()
-        
-        app.buttons["ic exit to app"].tap()
-        
-        XCTAssert(!app.buttons["Arriving"].exists)
     }
 
     

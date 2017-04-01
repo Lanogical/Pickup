@@ -16,12 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool  {
         // Override point for customization after application launch.
-        UserDefaults.standard.set(nil, forKey: LocalData.tokenKey)
-        UserDefaults.standard.synchronize()
         
         //BuddyBuildSDK setup
 
-        BuddyBuildSDK.setup()
+//        BuddyBuildSDK.setup()
         
         return true
     }
