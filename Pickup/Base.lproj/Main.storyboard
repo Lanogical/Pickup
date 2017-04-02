@@ -114,10 +114,10 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--View Controller-->
+        <!--Display Groups View Controller-->
         <scene sceneID="Dnf-Qw-0Mm">
             <objects>
-                <viewController restorationIdentifier="createGroup" storyboardIdentifier="createGroup" id="dL6-Aw-4yR" sceneMemberID="viewController">
+                <viewController restorationIdentifier="createGroup" storyboardIdentifier="createGroup" id="dL6-Aw-4yR" customClass="displayGroupsViewController" customModule="Pickup" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gkQ-Mz-xYm"/>
                         <viewControllerLayoutGuide type="bottom" id="D2e-M7-ode"/>
@@ -146,18 +146,32 @@
                                     <segue destination="pJS-Fh-wVT" kind="show" id="oST-Qm-odD"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="brS-TU-aB3">
+                                <rect key="frame" x="16" y="100" width="343" height="471"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="brS-TU-aB3" secondAttribute="trailing" id="0Rw-OM-aud"/>
                             <constraint firstAttribute="trailing" secondItem="BgO-cq-Bq1" secondAttribute="trailing" constant="32" id="21V-bf-KPX"/>
+                            <constraint firstItem="brS-TU-aB3" firstAttribute="top" secondItem="T2l-gY-wgg" secondAttribute="bottom" id="5RC-ED-NEK"/>
                             <constraint firstItem="BgO-cq-Bq1" firstAttribute="leading" secondItem="fxl-jF-Lx4" secondAttribute="leading" constant="32" id="HNt-EO-PNo"/>
                             <constraint firstItem="D2e-M7-ode" firstAttribute="top" secondItem="BgO-cq-Bq1" secondAttribute="bottom" constant="64" id="ZE0-R3-b5v"/>
                             <constraint firstItem="T2l-gY-wgg" firstAttribute="leading" secondItem="fxl-jF-Lx4" secondAttribute="leadingMargin" constant="32" id="bJF-aX-oD8"/>
+                            <constraint firstItem="brS-TU-aB3" firstAttribute="leading" secondItem="fxl-jF-Lx4" secondAttribute="leadingMargin" id="edK-EB-CJi"/>
                             <constraint firstItem="BgO-cq-Bq1" firstAttribute="centerX" secondItem="fxl-jF-Lx4" secondAttribute="centerX" id="fyw-cL-uW0"/>
+                            <constraint firstItem="BgO-cq-Bq1" firstAttribute="top" secondItem="brS-TU-aB3" secondAttribute="bottom" id="gzu-W6-CaF"/>
                             <constraint firstItem="T2l-gY-wgg" firstAttribute="top" secondItem="gkQ-Mz-xYm" secondAttribute="bottom" constant="32" id="kzx-gi-JkC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="T2l-gY-wgg" secondAttribute="trailing" constant="32" id="x9M-Zl-tcf"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="doneButton" destination="BgO-cq-Bq1" id="b5w-XA-sAs"/>
+                        <outlet property="groupLabel" destination="brS-TU-aB3" id="vOo-kt-D6s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TgD-c5-Nmf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -191,13 +205,25 @@
                                     <segue destination="pJS-Fh-wVT" kind="showDetail" id="ISw-hU-76f"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registered for Pickup" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yWd-bm-3iX">
+                                <rect key="frame" x="48" y="52" width="279" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="YMA-eD-ulY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="D1s-Ae-ish" firstAttribute="top" secondItem="R3s-eg-r55" secondAttribute="bottom" constant="32" id="0sy-hx-zuR"/>
                             <constraint firstItem="D1s-Ae-ish" firstAttribute="leading" secondItem="DmP-g7-qC1" secondAttribute="leadingMargin" constant="64" id="8X8-Dr-B32"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yWd-bm-3iX" secondAttribute="trailing" constant="32" id="Eok-bD-MNR"/>
                             <constraint firstItem="R3s-eg-r55" firstAttribute="leading" secondItem="DmP-g7-qC1" secondAttribute="leadingMargin" constant="16" id="HFi-ga-Veq"/>
+                            <constraint firstItem="yWd-bm-3iX" firstAttribute="top" secondItem="gph-DT-WXh" secondAttribute="bottom" constant="32" id="KLx-dh-tLz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="D1s-Ae-ish" secondAttribute="trailing" constant="64" id="KhC-2q-C1C"/>
+                            <constraint firstItem="yWd-bm-3iX" firstAttribute="leading" secondItem="DmP-g7-qC1" secondAttribute="leadingMargin" constant="32" id="RDj-4g-E3l"/>
                             <constraint firstAttribute="trailingMargin" secondItem="R3s-eg-r55" secondAttribute="trailing" constant="16" id="VUP-Ry-MmV"/>
                             <constraint firstItem="VtW-ac-n06" firstAttribute="top" secondItem="D1s-Ae-ish" secondAttribute="bottom" constant="64" id="Y7K-M9-71D"/>
                             <constraint firstItem="R3s-eg-r55" firstAttribute="top" secondItem="gph-DT-WXh" secondAttribute="bottom" constant="32" id="mmF-vi-4jg"/>
@@ -342,7 +368,7 @@
                                         <rect key="frame" x="0.0" y="28" width="343" height="24"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="f9k-yF-bBX" id="EFT-Wj-Odg">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="24"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="23"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hHs-2Z-3NX">
@@ -416,6 +442,6 @@
         <image name="color_aceraLogo" width="282" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="oST-Qm-odD"/>
+        <segue reference="ISw-hU-76f"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -65,7 +65,8 @@ class CreateGroup: UIViewController, UITextFieldDelegate{
         let groupString = groupArray.joined(separator: ", ")
         if groupName.text! != "" {
             APIRequests.createGroup(kids: groupString, name: groupName.text!)
-            let cont = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "createGroup")
+            let cont = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "createGroup") as! displayGroupsViewController
+            cont.groupText = groupString
             present(cont, animated: true, completion: nil)
         }else{
             for kid in groupArray {
