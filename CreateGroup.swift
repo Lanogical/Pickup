@@ -8,7 +8,7 @@
 
 import UIKit
 import Material
-
+/// Create Group Viewcontroller
 class CreateGroup: UIViewController, UITextFieldDelegate{
     
     var kids: [String] = []
@@ -60,6 +60,9 @@ class CreateGroup: UIViewController, UITextFieldDelegate{
     
     @IBOutlet var doneButton: FlatButton!
     
+    /**
+     Handles Done Button Click
+     */
     
     @IBAction func doneClicked(_ sender: Any) {
         let groupString = groupArray.joined(separator: ", ")
@@ -79,6 +82,10 @@ class CreateGroup: UIViewController, UITextFieldDelegate{
         
     }
     
+    /**
+     Updates the Tableview Data
+    */
+    
     func updateNow() {
         if kidsSelectTableView.data.contains(kidsTextField.text!) && !(kidsLabel.text!.contains(kidsTextField.text!)){
             addButton.isEnabled = true
@@ -88,19 +95,35 @@ class CreateGroup: UIViewController, UITextFieldDelegate{
         kidsSelectTableView.updateData(new: kidsTextField.text!)
     }
     
+    /**
+     Opens the Searchable Dropdown
+     */
+    
     func showSearchDown() {
         kidsSelectTableView.alpha = 1
     }
+    
+    /**
+     Closes the Searchable Dropdown
+     */
     
     func hideSearchDown() {
         kidsSelectTableView.alpha = 0
     }
 
+    /**
+     Kids Name Textfield
+     */
     @IBOutlet var kidsTextField: SearchDownTextField!
+    /**
+     List of Kids Label
+     */
     @IBOutlet var kidsLabel: UILabel!
     
     @IBOutlet var kidsSelectTableView: SearchDownTableView!
-    
+    /**
+     Handels Add Button Clicked
+     */
     @IBAction func addClicked(_ sender: Any) {
         if kidsTextField.text! != "" {
             kidsLabel.text!.append("\(kidsTextField.text!) \n")
@@ -119,6 +142,10 @@ class CreateGroup: UIViewController, UITextFieldDelegate{
         
         updateNow()
     }
+    
+    /**
+     Close keyboard when you click enter
+     */
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {   //delegate method
         textField.resignFirstResponder()
