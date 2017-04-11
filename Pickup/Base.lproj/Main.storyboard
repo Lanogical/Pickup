@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -113,6 +113,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="33" y="36"/>
         </scene>
         <!--Display Groups View Controller-->
         <scene sceneID="Dnf-Qw-0Mm">
@@ -175,7 +176,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TgD-c5-Nmf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1874" y="232"/>
+            <point key="canvasLocation" x="985" y="37"/>
         </scene>
         <!--Display Groups View Controller-->
         <scene sceneID="Lc3-e6-962">
@@ -236,7 +237,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y4O-on-h37" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1" y="1237"/>
+            <point key="canvasLocation" x="33" y="904"/>
         </scene>
         <!--Here View Controller-->
         <scene sceneID="M1g-oY-KMl">
@@ -276,12 +277,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 Minutes befor you arrive" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W4q-lo-UPs">
-                                <rect key="frame" x="48" y="84" width="279" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -290,15 +285,12 @@
                             <constraint firstItem="IBb-rN-2Wt" firstAttribute="centerX" secondItem="4A3-BV-02V" secondAttribute="centerX" id="99E-gM-YKy"/>
                             <constraint firstItem="PAq-VK-VQz" firstAttribute="top" secondItem="CSc-dr-UwZ" secondAttribute="bottom" id="Cjp-T3-FB6"/>
                             <constraint firstItem="IBb-rN-2Wt" firstAttribute="width" secondItem="4A3-BV-02V" secondAttribute="width" multiplier="1/2" id="FlE-IL-fsU"/>
-                            <constraint firstItem="W4q-lo-UPs" firstAttribute="leading" secondItem="4A3-BV-02V" secondAttribute="leadingMargin" constant="32" id="HHj-Ty-9w6"/>
                             <constraint firstItem="PAq-VK-VQz" firstAttribute="top" secondItem="nd3-ix-8Wc" secondAttribute="bottom" constant="64" id="SMc-cB-IhK"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="W4q-lo-UPs" secondAttribute="trailing" constant="32" id="UYi-8V-QEi"/>
                             <constraint firstItem="IBb-rN-2Wt" firstAttribute="height" secondItem="4A3-BV-02V" secondAttribute="height" multiplier="1/12" id="Zhc-xG-1sS"/>
                             <constraint firstItem="CSc-dr-UwZ" firstAttribute="top" secondItem="nd3-ix-8Wc" secondAttribute="bottom" id="a1P-5c-GlQ"/>
                             <constraint firstItem="xAC-us-HrW" firstAttribute="top" secondItem="IBb-rN-2Wt" secondAttribute="bottom" constant="10" id="aId-0y-j4n"/>
                             <constraint firstItem="CSc-dr-UwZ" firstAttribute="leading" secondItem="4A3-BV-02V" secondAttribute="leading" id="d5w-AX-UAG"/>
                             <constraint firstAttribute="trailing" secondItem="CSc-dr-UwZ" secondAttribute="trailing" id="vtO-Wu-XLs"/>
-                            <constraint firstItem="W4q-lo-UPs" firstAttribute="top" secondItem="CSc-dr-UwZ" secondAttribute="bottom" id="y5G-V1-cbD"/>
                         </constraints>
                     </view>
                     <connections>
@@ -307,7 +299,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LgR-LI-Iwx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="720.79999999999995" y="1238.2308845577213"/>
+            <point key="canvasLocation" x="985" y="904"/>
         </scene>
         <!--Create Group-->
         <scene sceneID="hbL-bN-ekj">
@@ -377,7 +369,7 @@
                                         <rect key="frame" x="0.0" y="28" width="343" height="24"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="f9k-yF-bBX" id="EFT-Wj-Odg">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="23"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="24"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hHs-2Z-3NX">
@@ -444,13 +436,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Je5-43-6Fb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1584.8" y="1237.3313343328336"/>
+            <point key="canvasLocation" x="1746" y="904"/>
         </scene>
     </scenes>
     <resources>
         <image name="color_aceraLogo" width="282" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ISw-hU-76f"/>
+        <segue reference="oST-Qm-odD"/>
     </inferredMetricsTieBreakers>
 </document>
