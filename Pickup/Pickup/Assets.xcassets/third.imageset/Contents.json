@@ -1,17 +1,17 @@
 {
     "images": [
         {
-            "filename": "ic_announcement.png",
+            "filename": "ic_directions_car.png",
             "idiom": "universal",
             "scale": "1x"
         },
         {
-            "filename": "ic_announcement_2x.png",
+            "filename": "ic_directions_car_2x.png",
             "idiom": "universal",
             "scale": "2x"
         },
         {
-            "filename": "ic_announcement_3x.png",
+            "filename": "ic_directions_car_3x.png",
             "idiom": "universal",
             "scale": "3x"
         }
